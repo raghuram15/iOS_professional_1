@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8978E7C12C181EAA007063ED /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8978E7C02C181EAA007063ED /* OnboardingContainerViewController.swift */; };
+		8978E7C32C1873DF007063ED /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8978E7C22C1873DF007063ED /* OnboardingViewController.swift */; };
 		898788B62C05EB4E00FF0BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898788B52C05EB4E00FF0BAF /* AppDelegate.swift */; };
 		898788BA2C05EB4E00FF0BAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898788B92C05EB4E00FF0BAF /* LoginViewController.swift */; };
 		898788BF2C05EB5400FF0BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898788BE2C05EB5400FF0BAF /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		8978E7C02C181EAA007063ED /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		8978E7C22C1873DF007063ED /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		898788B22C05EB4E00FF0BAF /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898788B52C05EB4E00FF0BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		898788B92C05EB4E00FF0BAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				8978E7C02C181EAA007063ED /* OnboardingContainerViewController.swift */,
+				8978E7C22C1873DF007063ED /* OnboardingViewController.swift */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				898788CC2C05F2E600FF0BAF /* LoginView.swift in Sources */,
 				898788BA2C05EB4E00FF0BAF /* LoginViewController.swift in Sources */,
+				8978E7C32C1873DF007063ED /* OnboardingViewController.swift in Sources */,
 				898788B62C05EB4E00FF0BAF /* AppDelegate.swift in Sources */,
 				8978E7C12C181EAA007063ED /* OnboardingContainerViewController.swift in Sources */,
 			);
