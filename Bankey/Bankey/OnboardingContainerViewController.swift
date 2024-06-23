@@ -8,15 +8,34 @@
 import Foundation
 import UIKit
 
+protocol OnboardingContainerViewControllerDelegate: AnyObject {
+    
+    func didFinishOnboarding()
+}
+
 class OnboardingContainerViewController: UIViewController {
 
     
     let pageViewController: UIPageViewController
     var pages = [UIViewController]()
     var currentVC: UIViewController {
+        
         didSet {
+            
+            guard let index = pages.firstIndex(of: currentVC) else { return }
+            nextButton.isHidden = index == pages.count - 1
+            backButton.isHidden = index == 0
+            doneButton.isHidden = !(index == pages.count - 1)
         }
     }
+    
+    
+    let nextButton = UIButton(type: .system)
+    let backButton = UIButton(type: .system)
+    let closeButton = UIButton(type: .system)
+    let doneButton = UIButton(type: .system)
+    
+    weak var delegate: OnboardingContainerViewControllerDelegate?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
@@ -41,6 +60,17 @@ class OnboardingContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setup()
+        style()
+        layout()
+        
+       
+    }
+    
+    
+    
+    private func setup(){
+        
         view.backgroundColor = .systemPurple
         
         addChild(pageViewController)
@@ -59,6 +89,63 @@ class OnboardingContainerViewController: UIViewController {
         
         pageViewController.setViewControllers([pages.first!], direction: .forward, animated: false, completion: nil)
         currentVC = pages.first!
+    }
+    
+    private func style() {
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        closeButton.setTitle("Close", for: [])
+        closeButton.addTarget(self, action: #selector(closeTapped), for: .primaryActionTriggered)
+        view.addSubview(closeButton)
+        
+        doneButton.translatesAutoresizingMaskIntoConstraints = false
+        doneButton.setTitle("Done", for: [])
+        doneButton.addTarget(self, action: #selector(doneTapped), for: .primaryActionTriggered)
+        view.addSubview(doneButton)
+        
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.setTitle("Next", for: [])
+        nextButton.addTarget(self, action: #selector(nextTapped), for: .primaryActionTriggered)
+        view.addSubview(nextButton)
+        
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        backButton.setTitle("Back", for: [])
+        backButton.addTarget(self, action: #selector(backTapped), for: .primaryActionTriggered)
+        view.addSubview(backButton)
+    }
+    
+    private func layout(){
+        //close
+        
+        NSLayoutConstraint.activate([
+            closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
+        
+        ])
+        
+        //Back
+        
+        NSLayoutConstraint.activate([
+            backButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: backButton.bottomAnchor, multiplier: 4)
+        
+        ])
+        
+        //Next
+        
+        NSLayoutConstraint.activate([
+        
+         view.trailingAnchor.constraint(equalToSystemSpacingAfter: nextButton.trailingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: nextButton.bottomAnchor, multiplier: 4)
+        ])
+        
+        //done
+        NSLayoutConstraint.activate([
+        
+         view.trailingAnchor.constraint(equalToSystemSpacingAfter: doneButton.trailingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: doneButton.bottomAnchor, multiplier: 4)
+        ])
+        
+        
     }
 }
 
@@ -94,3 +181,24 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
     }
 }
 
+// MARK: - Actions
+
+extension OnboardingContainerViewController {
+    
+    @objc func closeTapped(_ sender: UIButton) {
+        // TODO
+    }
+    
+    @objc func doneTapped(_ sender: UIButton) {
+        
+    }
+    
+    @objc func  nextTapped(_ sender: UIButton) {
+        
+    }
+    
+    @objc func backTapped(_ sender: UIButton) {
+        
+    }
+    
+}
