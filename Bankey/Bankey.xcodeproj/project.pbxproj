@@ -14,6 +14,8 @@
 		89280D192C2889AC00F2372E /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89280D182C2889AC00F2372E /* AccountSummaryViewController.swift */; };
 		89280D1B2C288B5E00F2372E /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89280D1A2C288B5E00F2372E /* AccountSummaryHeaderView.swift */; };
 		89280D1D2C288B7100F2372E /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89280D1C2C288B7100F2372E /* AccountSummaryHeaderView.xib */; };
+		8973A1462C2D987B008D82FB /* NSNotification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973A1452C2D987B008D82FB /* NSNotification.Name.swift */; };
+		8973A1482C2D9C3D008D82FB /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8973A1472C2D9C3D008D82FB /* UITextField+SecureToggle.swift */; };
 		8978E7C12C181EAA007063ED /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8978E7C02C181EAA007063ED /* OnboardingContainerViewController.swift */; };
 		8978E7C32C1873DF007063ED /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8978E7C22C1873DF007063ED /* OnboardingViewController.swift */; };
 		898788B62C05EB4E00FF0BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898788B52C05EB4E00FF0BAF /* AppDelegate.swift */; };
@@ -45,6 +47,8 @@
 		89280D182C2889AC00F2372E /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		89280D1A2C288B5E00F2372E /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		89280D1C2C288B7100F2372E /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		8973A1452C2D987B008D82FB /* NSNotification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.swift; sourceTree = "<group>"; };
+		8973A1472C2D9C3D008D82FB /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		8978E7C02C181EAA007063ED /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		8978E7C22C1873DF007063ED /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		898788B22C05EB4E00FF0BAF /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +90,8 @@
 				89280D132C28755300F2372E /* UIViewController+utils.swift */,
 				89AE5DA22C2CA52900B5F854 /* DecimalUtils.swift */,
 				89AE5DA42C2CA59C00B5F854 /* CurrencyFormattor.swift */,
+				8973A1452C2D987B008D82FB /* NSNotification.Name.swift */,
+				8973A1472C2D9C3D008D82FB /* UITextField+SecureToggle.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 				89AE5DA52C2CA59C00B5F854 /* CurrencyFormattor.swift in Sources */,
 				89280D122C286FDA00F2372E /* DummyViewController.swift in Sources */,
 				898788CC2C05F2E600FF0BAF /* LoginView.swift in Sources */,
+				8973A1482C2D9C3D008D82FB /* UITextField+SecureToggle.swift in Sources */,
 				89280D1B2C288B5E00F2372E /* AccountSummaryHeaderView.swift in Sources */,
 				89280D102C286E4700F2372E /* LocalState.swift in Sources */,
 				89AE5DA32C2CA52900B5F854 /* DecimalUtils.swift in Sources */,
@@ -292,6 +299,7 @@
 				89280D162C2878E400F2372E /* MainViewController.swift in Sources */,
 				89280D192C2889AC00F2372E /* AccountSummaryViewController.swift in Sources */,
 				898788B62C05EB4E00FF0BAF /* AppDelegate.swift in Sources */,
+				8973A1462C2D987B008D82FB /* NSNotification.Name.swift in Sources */,
 				8978E7C12C181EAA007063ED /* OnboardingContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
